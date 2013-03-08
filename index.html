@@ -1,0 +1,638 @@
+<!doctype html>
+//Dylan Romeo Wahlstrom
+//1302
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>iDo's To Do</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+    <div data-role="page" id="groombride">
+    <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>iDo's To Do</h1>
+    </div>
+    
+	    <div data-theme="a">
+                <h3>Are You...</h3>
+                <ul data-role="listview">
+                <li>
+                    <a href="#homegroom">
+                    The Best Man
+                    </a>
+                </li>
+                <li>
+                    <a href="#homebride">
+                    The Maid of Honor
+                    </a>
+                </li>
+	    
+	    
+	
+	
+	</div>
+	</div>
+	
+    </div>
+    <div data-role="page" id="homegroom" data-add-back-btn="true"> 
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Man</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+	    
+		<div data-role="navbar">
+                <ul>
+                    <li><a href="#homegroom" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#add" data-transition="flip" data-icon="plus" data-theme="a">Groomsman</a></li>
+                    <li><a href="#gparty" data-transition="flip" data-icon="info" data-theme="a">Bachelor Party</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+        
+        <div data-role="content">
+            
+            <div data-theme="a">
+                <h3>To-Do List</h3>
+                <ul data-role="listview">
+                <li>
+                    <a href="#date">
+                        Add Date
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Add Venue
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Local Bars
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Local Clubs
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Local Taxi Service
+                    </a>
+                </li>
+            </ul>
+        </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div data-role="page" id="add" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Man</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homegroom" data-transition="flip" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a" class="ui-btn-active ui-state-persist">Groomsman</a></li>
+                    <li><a href="#gparty" data-transition="flip" data-icon="info" data-theme="a">Bachelor Party</a></li>
+                    
+                </ul>
+	    </div>
+	    </div>
+            
+        </div>
+	
+	 <div data-role="content">
+            <form action="" method="post" id="addclient">
+		<div data-role="fieldcontain">
+		    <label for="fname">First Name:</label>
+		    <input type="text" name="fname" id="fname" class="required" />
+		</div>	
+		<div data-role="fieldcontain">    
+		    <label for="lname">Last Name:</label>
+		    <input type="text" name="lname" id="lname" class="required"/>
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="email">E-mail:</label>
+		    <input type="text" name="email" id="email" class="required email" />
+		</div>
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Drink:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Married:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="style">Relation to Groom:</label>
+		    <select name="style" id="style" class="required">
+			<option data-placeholder="true">Please Select One</option>
+			<optgroup label="Relation"></optgroup>
+			    <option value="Old">Friend</option>
+			    <option value="New">Brother</option>
+			    <option value="Sail">Cousin</option>
+			    <option value="Jap">Uncle</option>
+			    <option value="Por">Co-Worker</option>
+			</optgroup>
+		    </select>
+		</div>
+    
+		<div>
+		    <input type="reset" value="Reset" data-theme="a" />
+		    <input type="submit" value="Submit" data-theme="b" />
+		</div>
+		
+		<a href="#tattooerrors" id="taterrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+		
+	    </form>
+	    
+	 </div>
+    </div>
+        
+    </div>
+    
+    <div data-role="page" id="date">
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Man</h1>
+	</div>
+	
+	
+	    <div>
+	    	<label for="mydate">Wedding Date:</label>
+
+		    <input name="mydate" id="mydate" type="date" data-position="fixed" data-role="datebox"
+		    data-options='{"mode": "calbox", "calShowWeek": true}'>
+	    </div>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+		
+		
+		
+	
+	    
+		<div data-role="navbar">
+                <ul>
+                    <li><a href="#homegroom" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#add" data-transition="flip" data-icon="plus" data-theme="a">Groomsman</a></li>
+                    <li><a href="#gparty" data-transition="flip" data-icon="info" data-theme="a">Bachelor Party</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    
+    <div data-role="dialog" id="tattooerrors">
+	
+	<div data-role="header" data-position="fixed">
+	    <h1>Missing Felids</h1>
+	</div>
+	
+	<div data-role="content">
+	    <ul>
+		<li>Test.</li>
+		
+	    </ul>
+	</div>
+    </div>
+        
+      
+        
+            
+            
+        </div>
+        
+        
+            
+        </div>
+        
+    </div>
+     
+    <div data-role="page" id="error" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Man</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#homegroom" data-transition="flip" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a">Add Client</a></li>
+                    <li><a href="#gparty" data-transition="flip" data-icon="info" data-theme="a">Bachelor Party</a></li>
+                    
+                </ul>
+	    </div>
+            </div>
+        </div>
+        
+        <div data-role="content">
+            
+            <h3>You have navigated to a page that currently does not exist!</h3>
+            
+        </div>
+        
+        
+            
+        </div>
+        
+    </div>
+    
+    <div data-role="page" id="gparty" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Man</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homegroom" data-transition="flip" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a" >Groomsman</a></li>
+                    <li><a href="#gparty" data-transition="flip" data-icon="info" data-theme="a" class="ui-btn-active ui-state-persist">Bachelor Party</a></li>
+                    
+                </ul>
+	    </div>
+	    </div>
+            
+        </div>
+	<div data-role="content">
+            <form action="" method="post" id="addclient">
+	</div>
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Bars:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Clubs:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Concert:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Sporting Event:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		
+    </div>
+		 
+	    	
+    
+    <div data-role="page" id="homebride" data-add-back-btn="true">
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Maid</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+	    
+		<div data-role="navbar">
+                <ul>
+                    <li><a href="#homebride" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#add" data-transition="flip" data-icon="plus" data-theme="a">Bridesmaid</a></li>
+                    <li><a href="#party" data-transition="flip" data-icon="info" data-theme="a">Bachelorette Party</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+        
+        <div data-role="content">
+            
+            <div data-theme="a">
+                <h3>To-Do List</h3>
+                <ul data-role="listview">
+                <li>
+                    <a href="#date">
+                        Add Date
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Add Venue
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Local Bars
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Local Clubs
+                    </a>
+                </li>
+                <li>
+                    <a href="#error">
+                        Local Taxi Service
+                    </a>
+                </li>
+            </ul>
+        </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div data-role="page" id="add" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Maid</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homebride" data-transition="flip" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a" class="ui-btn-active ui-state-persist">Bridesmaid</a></li>
+                    <li><a href="#bparty" data-transition="flip" data-icon="info" data-theme="a">Bachelorette Party</a></li>
+                    
+                </ul>
+	    </div>
+	    </div>
+            
+        </div>
+	
+	 <div data-role="content">
+            <form action="" method="post" id="addclient">
+		<div data-role="fieldcontain">
+		    <label for="fname">First Name:</label>
+		    <input type="text" name="fname" id="fname" class="required" />
+		</div>	
+		<div data-role="fieldcontain">    
+		    <label for="lname">Last Name:</label>
+		    <input type="text" name="lname" id="lname" class="required"/>
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="email">E-mail:</label>
+		    <input type="text" name="email" id="email" class="required email" />
+		</div>
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Drink:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Married:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		<div data-role="fieldcontain">    
+		    <label for="style">Relation to Groom:</label>
+		    <select name="style" id="style" class="required">
+			<option data-placeholder="true">Please Select One</option>
+			<optgroup label="Relation"></optgroup>
+			    <option value="Old">Friend</option>
+			    <option value="New">Brother</option>
+			    <option value="Sail">Cousin</option>
+			    <option value="Jap">Uncle</option>
+			    <option value="Por">Co-Worker</option>
+			</optgroup>
+		    </select>
+		</div>
+    
+		<div>
+		    <input type="reset" value="Reset" data-theme="a" />
+		    <input type="submit" value="Submit" data-theme="b" />
+		</div>
+		
+		<a href="#tattooerrors" id="taterrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+		
+	    </form>
+	    
+	 </div>
+    </div>
+        
+    </div>
+    
+    <div data-role="page" id="date">
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Maid</h1>
+	</div>
+	
+	
+	    <div>
+	    	<label for="mydate">Wedding Date:</label>
+
+		    <input name="mydate" id="mydate" type="date" data-position="fixed" data-role="datebox"
+		    data-options='{"mode": "calbox", "calShowWeek": true}'>
+	    </div>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+		
+		
+		
+	
+	    
+		<div data-role="navbar">
+                <ul>
+                    <li><a href="#homebride" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#add" data-transition="flip" data-icon="plus" data-theme="a">Bridesmaid</a></li>
+                    <li><a href="#bparty" data-transition="flip" data-icon="info" data-theme="a">Bachelorette Party</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    
+    <div data-role="dialog" id="tattooerrors">
+	
+	<div data-role="header" data-position="fixed">
+	    <h1>Missing Felids</h1>
+	</div>
+	
+	<div data-role="content">
+	    <ul>
+		<li>Test.</li>
+		
+	    </ul>
+	</div>
+    </div>
+    
+     <div data-role="page" id="info" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Maid</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#homebride" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a">Bridesmaid</a></li>
+                    <li><a href="#bparty" data-icon="info" data-theme="a" class="ui-btn-active ui-state-persist">Bachelorette Party</a></li>
+                    
+                </ul>
+	    </div>
+            </div>
+        </div>
+        
+      
+        
+            
+            
+        </div>
+        
+        
+            
+        </div>
+        
+    </div>
+    
+    <div data-role="page" id="bparty" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Maid</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar" data-position="fixed">
+                <ul>
+                    <li><a href="#homebride" data-transition="flip" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a" >Groomsman</a></li>
+                    <li><a href="#bparty" data-transition="flip" data-icon="info" data-theme="a" class="ui-btn-active ui-state-persist">Bachelor Party</a></li>
+                    
+                </ul>
+	    </div>
+	    </div>
+            
+        </div>
+	<div data-role="content">
+            <form action="" method="post" id="addclient">
+	</div>
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Bars:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Clubs:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Concert:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		
+		<div data-role="fieldcontain">    
+		    <fieldset data-role="controlgroup">
+			<legend>Spa:</legend>
+			<input type="radio" value="Male" name="sexx" id="sexm" />
+			<label for="sexm">Yes</label>
+			<input type="radio" value="Female" name="sexx" id="sexf" />
+			<label for="sexf">No</label>
+		    </fieldset>
+		</div>
+		<div>
+		    <input type="reset" value="Reset" data-theme="a" />
+		    <input type="submit" value="Submit" data-theme="b" />
+		</div>
+		
+		 <div>
+     
+    <div data-role="page" id="error" data-add-back-btn="true" >
+        
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>You're the Maid</h1>
+	    <div data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#homebride" data-transition="flip" data-icon="home" data-theme="a">Home</a></li>
+                    <li><a href="#add" data-icon="plus" data-theme="a">Bridesmaid</a></li>
+                    <li><a href="#bparty" data-transition="flip" data-icon="info" data-theme="a">Bachelorette Party</a></li>
+                    
+                </ul>
+	    </div>
+            </div>
+        </div>
+        
+        <div data-role="content">
+            
+            <h3>You have navigated to a page that currently does not exist!</h3>
+            
+        </div>
+        
+        
+            
+        </div>
+        
+    </div>
+    
+
+	<!-- JavaScript under here -->
+        
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
